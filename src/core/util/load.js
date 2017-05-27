@@ -15,11 +15,11 @@ export const getDatabase = () => {
   const env = process.env['NODE_ENV'] || 'development';
 
   const config = {
-    port: process.env['POSTGRES_PORT_5432_TCP_PORT'] || process.env['BD_PORT'] || '5434',
+    port: process.env['POSTGRES_PORT_5432_TCP_PORT'] || process.env['BD_PORT'] || '5432',
     host: process.env['POSTGRES_PORT_5432_TCP_ADDR'] || process.env['BD_HOST'] || '127.0.0.1',
-    username: process.env['BD_USER'] || 'template',
-    password: process.env['BD_PASS'] || 'template',
-    database: process.env['BD_NAME'] || 'template',
+    username: process.env['BD_USER'] || 'postgres',
+    password: process.env['BD_PASS'] || 'postgres',
+    database: process.env['BD_NAME'] || 'template_test',
     dialect: 'postgres'
   };
 
